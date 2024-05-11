@@ -10,93 +10,103 @@
     </head>
 
     <body class="flex justify-center items-center min-h-screen">
-        <div class="bg-[#CCFFE6] text-[#181028] p-4 space-y-3 shadow-2xl rounded-xl max-w-md ">
-            <h1>Sign Up Below!</h1>
-            <form action="https://api.web3forms.com/submit" method="POST" class="row g-1" id="form">
-                <div class="col-sm-12">
-                    <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+        <div class="bg-[#CCFFE6] text-[#181028] p-6 space-y-8 shadow-2xl rounded-xl max-w-lg">
+           
+            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                <div id="divHead">
+                    <h1 id="head">Contact Us!</h1>
+                    <p>Fill out the information below to send us a message.</p>
+                </div>
+                <input type="hidden" name="access_key" value="95b5ad2c-7c90-4cc0-93f4-815d1b35598c">
+                <div class="row">
+                    <div class="col-sm-6" id="divFirst">
+                        <label for="firstName" class="form-label">First Name</label>
+                      <input type="text" class="form-control" placeholder="Alexis" name="first" id="firstName">
+                    </div>
+                    <div class="col-sm-6" id="divLast">
+                        <label for="lastName" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" placeholder="Chaney" name="last" id="lastName">
+                    </div>
                   </div>
-                  <div class="col-sm-12">
-                    <label for="inputPassword4" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                <div class="row">
+                    <div class="col-sm-6" id="divEmail">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="you@company.com" name="email" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-6" id="divPhone">
+                        <label for="phoneNum" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="+1 (123) 456-7890" name="phone"   id="phoneNum">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity"  placeholder="Atlanta" name="city">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputState" class="form-label">State</label>
+                        <select id="inputState" class="form-select" name="state">
+                          <option selected>Choose...</option>
+                          <option>Alabama</option>
+                          <option>Alaska</option>
+                          <option>Arizona</option>
+                          <option>Arkansas</option>
+                          <option>California</option>
+                          <option>Colorado</option>
+                          <option>Connecticut</option>
+                          <option>Delaware</option>
+                          <option>Florida</option>
+                          <option>Georgia</option>
+                          <option>Hawaii</option>
+                          <option>Idaho</option>
+                          <option>Illinois</option>
+                          <option>Indiana</option>
+                          <option>Iowa</option>
+                          <option>Kansas</option>
+                          <option>Kentucy</option>
+                          <option>Louisiana</option>
+                          <option>Maine</option>
+                          <option>Maryland</option>
+                          <option>Massachusetts</option>
+                          <option>Michigan</option>
+                          <option>Minnesota</option>
+                          <option>Mississippi</option>
+                          <option>Missouri</option>
+                          <option>Montana</option>
+                          <option>Nebraska</option>
+                          <option>Nevada</option>
+                          <option>New Hampshire</option>
+                          <option>New Jersey</option>
+                          <option>New Mexico</option>
+                          <option>New York</option>
+                          <option>North Carolina</option>
+                          <option>North Dakota</option>
+                          <option>Ohio</option>
+                          <option>Oklahoma</option>
+                          <option>Oregon</option>
+                          <option>Pennsylvania</option>
+                          <option>Rhode Island</option>
+                          <option>South Carolina</option>
+                          <option>South Dakota</option>
+                          <option>Tennessee</option>
+                          <option>Texas</option>
+                          <option>Utah</option>
+                          <option>Vermont</option>
+                          <option>Virginia</option>
+                          <option>Washington</option>
+                          <option>West Virginia</option>
+                          <option>Wisconsin</option>
+                          <option>Wyoming</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Message"  name="message"  rows="3"></textarea>
                   </div>
-                  <div class="col-12">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputAddress2" class="form-label">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                  </div>
-                  <div class="col-sm-8">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                  </div>
-                  <div class="col-auto">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Choose...</option>
-                      <option>Alabama</option>
-                      <option>Alaska</option>
-                      <option>Arizona</option>
-                      <option>Arkansas</option>
-                      <option>California</option>
-                      <option>Colorado</option>
-                      <option>Conneticut</option>
-                      <option>Delaware</option>
-                      <option>Florida</option>
-                      <option>Georgia</option>
-                      <option>Hawaii</option>
-                      <option>Idaho</option>
-                      <option>Illinois</option>
-                      <option>Indiana</option>
-                      <option>Iowa</option>
-                      <option>Kansas</option>
-                      <option>Kentucy</option>
-                      <option>Louisiana</option>
-                      <option>Maine</option>
-                      <option>Maryland</option>
-                      <option>Massachusetts</option>
-                      <option>Michigan</option>
-                      <option>Minnesota</option>
-                      <option>Mississippi</option>
-                      <option>Missouri</option>
-                      <option>Montana</option>
-                      <option>Nebraska</option>
-                      <option>Nevada</option>
-                      <option>New Hampshire</option>
-                      <option>New Jersey</option>
-                      <option>New Mexico</option>
-                      <option>New York</option>
-                      <option>North Carolina</option>
-                      <option>North Dakota</option>
-                      <option>Ohio</option>
-                      <option>Oklahoma</option>
-                      <option>Oregon</option>
-                      <option>Pennsylvania</option>
-                      <option>Rhode Island</option>
-                      <option>South Carolina</option>
-                      <option>South Dakota</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Utah</option>
-                      <option>Vermont</option>
-                      <option>Virginia</option>
-                      <option>Washington</option>
-                      <option>West Virginia</option>
-                      <option>Wisconsin</option>
-                      <option>Wyoming</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-4">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
-               
-                  <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                  </div>
+                <div class="d-grid gap-2 col-12 mx-auto">
+                    <button type="submit" class="btn" id="submit">Submit</button>
+                </div>
         
             </form>
         </div>
