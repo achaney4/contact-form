@@ -13,7 +13,7 @@
     <body class="flex justify-center items-center min-h-screen">
         <div class="bg-[#CCFFE6] text-[#181028] p-6 space-y-8 shadow-2xl rounded-xl max-w-lg">
            
-            <form  method="POST" id="form">
+            <form  method="POST" id="form"  onsubmit="return validateForm()">
                 <input type="hidden" name="subject" value="New Submission from Web3Forms">
                 <input type="hidden" name="access_key" value="95b5ad2c-7c90-4cc0-93f4-815d1b35598c">
                 <input type="checkbox" name="botcheck" id="" style="display: none;">
@@ -27,31 +27,37 @@
                 <div class="row">
                     <div class="col-sm-6" id="divFirst">
                         <label for="firstName" class="form-label">First Name</label>
-                      <input type="text" class="form-control" placeholder="Alexis" name="first" id="firstName" required>
+                      <input type="text" class="form-control" placeholder="Alexis" name="first" id="firstName">
+                      <span id="firstName-error"  class="error-message"></span>
                     </div>
+                   
                     <div class="col-sm-6" id="divLast">
                         <label for="lastName" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" placeholder="Chaney" name="last" id="lastName" required>
+                      <input type="text" class="form-control" placeholder="Chaney" name="last" id="lastName">
+                      <span id="lastName-error"  class="error-message"></span>
                     </div>
+
                   </div>
                 <div class="row">
                     <div class="col-sm-6" id="divEmail">
                         <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" placeholder="you@company.com" name="email" id="inputEmail4" required>
+                        <input type="email" class="form-control" placeholder="you@company.com" name="email" id="inputEmail4">
+                        <span id="email-error"  class="error-message"></span>
                     </div>
                     <div class="col-sm-6" id="divPhone">
                         <label for="phoneNum" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" placeholder="+1 (123) 456-7890" name="phone"   id="phoneNum" required>
+                        <input type="tel" class="form-control" placeholder="+1 (123) 456-7890" name="phone" id="phoneNum">
+                        <span id="phone-error"  class="error-message"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="inputCity"  placeholder="Atlanta" name="city" required>
+                        <label for="inputCity" class="form-label">City (Optional) </label>
+                        <input type="text" class="form-control" id="inputCity"  placeholder="Atlanta" name="city">
                     </div>
                     <div class="col-sm-6">
-                        <label for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select" name="state" required>
+                        <label for="inputState" class="form-label">State (Optional)</label>
+                        <select id="inputState" class="form-select" name="state">
                           <option selected>Choose...</option>
                           <option>Alabama</option>
                           <option>Alaska</option>
@@ -108,7 +114,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Message"  name="message"  rows="3" required></textarea>
+                    <textarea class="form-control" id="message" placeholder="Your Message"  name="message"  rows="3"></textarea>
+                    <span id="message-error"  class="error-message"></span>
                   </div>
                 <div class="d-grid gap-2 col-12 mx-auto">
                     <button type="submit" class="btn" id="submit">Submit</button>

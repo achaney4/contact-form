@@ -38,6 +38,7 @@ p{
 .mb-3{
     padding-top: 20px;
 }
+
 .col{
     display: flex;
     justify-content: center;
@@ -58,3 +59,9 @@ p{
 #submit:hover {
     filter: brightness(110%);
   }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

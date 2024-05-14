@@ -36,3 +36,63 @@ form.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
+
+
+function validateForm() {
+
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("inputEmail4").value;
+    const phone = document.getElementById("phoneNum").value;
+    const message = document.getElementById("message").value;
+
+    const firstNameError = document.getElementById("firstName-error");
+    const lastNameError = document.getElementById("lastName-error");
+    const emailError = document.getElementById("email-error");
+    const phoneError = document.getElementById("phone-error");
+    const messageError = document.getElementById("message-error");
+    
+    firstNameError.textContent = "";
+    lastNameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    messageError.textContent = "";
+    
+    let isValid = true;
+
+    
+    if (firstName === "" || /\d/.test(firstName)) {
+        firstNameError.textContent =
+            "Please enter your first name properly.";
+        isValid = false;
+    }
+
+    if (lastName === "" || /\d/.test(lastName)) {
+        lastNameError.textContent =
+            "Please enter your last name properly.";
+        isValid = false;
+    }
+
+    if (email === "" || !email.includes("@")) {
+        emailError.textContent =
+            "Please enter a valid email address.";
+        isValid = false;
+    }
+
+    if (phone === "" || phone.length < 10 || isNaN(phone)) {
+        phoneError.textContent =
+            "Please enter your phone number properly.";
+        isValid = false;
+    }
+
+    if (message === "" || message.length < 5) {
+        messageError.textContent =
+            "Please enter your message properly. Must be more than 5 characters.";
+        isValid = false;
+    }
+
+
+
+
+    return isValid;
+}
